@@ -21,7 +21,7 @@ public class Member {
     @Id
     private String id;
 
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
     private String password;
 
     public void changePassword(String password) {
