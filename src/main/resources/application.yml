@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: local
+  h2:
+    console:
+      enabled: true
+      path: /user-management
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:~/Kr/Purpledog/Assignment/user-management;AUTO_SERVER=TRUE # JDBC URL
+    username: admin # User Name
+    password: admin # Password
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  config: classpath:logback/logback.xml
